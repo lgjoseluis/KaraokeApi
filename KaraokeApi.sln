@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F759561A-A5DC-4C77-B1DE-2B10B17F7C5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Karaoke.Song.Api", "src\Karaoke.Song.Api\Karaoke.Song.Api.csproj", "{5A548D8A-A1AB-4DC4-88A6-C2681685E196}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A548D8A-A1AB-4DC4-88A6-C2681685E196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A548D8A-A1AB-4DC4-88A6-C2681685E196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A548D8A-A1AB-4DC4-88A6-C2681685E196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A548D8A-A1AB-4DC4-88A6-C2681685E196}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A548D8A-A1AB-4DC4-88A6-C2681685E196} = {F759561A-A5DC-4C77-B1DE-2B10B17F7C5F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {23B93E18-E4C4-49E4-BE37-CEE74BAC2AF7}
+	EndGlobalSection
+EndGlobal
