@@ -3,7 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Karaoke.Song.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
     public class SongController : ControllerBase
     {
