@@ -1,4 +1,5 @@
-﻿using Microsoft.OpenApi.Models;
+﻿using Karaoke.Song.Api.Middlewares;
+using Microsoft.OpenApi.Models;
 
 namespace Karaoke.Song.Api.Extensions
 {
@@ -51,6 +52,11 @@ namespace Karaoke.Song.Api.Extensions
                 options.SwaggerEndpoint($"/swagger/v1/swagger.json", "Karaoke.Song.Api V1.0");
                 options.SwaggerEndpoint($"/swagger/v1.1/swagger.json", "Karaoke.Song.Api V1.1");
             });
+        }
+
+        public static void UseSwaggerAuthorized(this IApplicationBuilder app)
+        {
+             app.UseMiddleware<SwaggerBasicAuthMiddleware>();
         }
     }
 }
