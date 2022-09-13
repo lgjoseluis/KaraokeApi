@@ -1,28 +1,19 @@
-using Microsoft.AspNetCore.Mvc;
+using Karaoke.Song.Api.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 //Versioning
-builder.Services.AddApiVersioning( options =>
-{
-    options.DefaultApiVersion = new ApiVersion(1, 0);
-    options.AssumeDefaultVersionWhenUnspecified = true;
-    options.ReportApiVersions = true;
-});
-builder.Services.AddVersionedApiExplorer(options => { 
-    // configure options  
-    options.SubstituteApiVersionInUrl = true;
-    options.GroupNameFormat = "'v'VVV";
-});
+builder.Services.AddApiVersioningConfigured();
+builder.Services.AddVersionedApiExplorerConfigured();
 
 
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGenConfigured();
 
 var app = builder.Build();
 
@@ -30,7 +21,7 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUIConfigured();
 }
 
 app.UseHttpsRedirection();
